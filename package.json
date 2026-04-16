@@ -1,0 +1,30 @@
+{
+  "name": "todo-list",
+  "version": "1.0.0",
+  "description": "A To Do list application given by the Odin Project that utilizes Webpack bundling and OOP principles with JavaScript\r This project may be a little wonky as i have taken an unintentional break from Web Development and haven't touched JS coding for a while. Though i have still been taking notes here and there, and also working with another language (for my school) and so i haven't really took time away from coding, just took time away from web dev in general.\r It may take me a little bit to finish this project but, once done, I will add on to this readme file and explain the rest.",
+  "main": "home.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RandomUser04329/ToDo-list.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/RandomUser04329/ToDo-list/issues"
+  },
+  "homepage": "https://github.com/RandomUser04329/ToDo-list#readme",
+  "devDependencies": {
+    "css-loader": "^7.1.4",
+    "html-loader": "^5.1.0",
+    "html-webpack-plugin": "^5.6.6",
+    "style-loader": "^4.0.0",
+    "webpack": "^5.106.2",
+    "webpack-cli": "^7.0.2",
+    "webpack-dev-server": "^5.2.3"
+  }
+}

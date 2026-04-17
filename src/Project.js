@@ -1,26 +1,72 @@
+class Content {
+    #name;
+    #desc;
+    #dateCreated;
+    #dateToDue;
 
-class CreateProject {
-
-    static ProjectTitle;
-    static ProjectDescription;
-    //static ProjectDataCreated;
-    //static ProjectTask;
-
-    constructor(ProjectTitle, ProjectDesc/*,ProjectDateCreated*/) {
-        this.ProjectTitle = ProjectTitle;
-        this.ProjectDescription = ProjectDesc;
+    constructor(Title, Description) {
+        this.#name = Title;
+        this.#desc = Description;
     }
 
-    static getProjectName() {
-        return ProjectTitle;
+    get Name() {
+        return this.#name;
     }
 
-    static getProjectDescription() {
-        return ProjectDescription;
-    }
-    
+    get Description() {
+        return this.#desc;
+    }   
 
+    get DateCreated() {
+        return this.#dateCreated;
+    }
+
+    get DateDue() {
+        return this.#dateToDue;
+    }
+
+
+} 
+
+class Project extends Content {
+    project;
+    #name;
+    #desc;
+    #dateCreated;
+
+    constructor() { 
+        super(Title, Description);
+        this.#name = Title;
+        this.#desc = Description;
+    }
+
+    CreateProject() {
+        project = { 
+            ProjectTitle: this.#name,
+            ProjectDescription: this.#desc,
+        }
+
+        return this.project;
+    }
 
 }
 
-export default CreateProject;
+
+
+
+class Task extends Content {
+    Task;
+
+    constructor() {
+        super();
+    }
+
+    
+}
+
+
+export { 
+    Content, 
+    Project, 
+    Task,
+}

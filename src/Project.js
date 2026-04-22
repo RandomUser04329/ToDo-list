@@ -1,52 +1,34 @@
 class Content {
-    #name;
-    #desc;
-    #dateCreated;
-    #dateToDue;
+    name;
+    desc;
+    DateStarted;
 
-    constructor(Title, Description) {
-        this.#name = Title;
-        this.#desc = Description;
+    constructor(Title, Description, DateStarted) {
+        this.name = Title;
+        this.desc = Description;
+        this.DateStarted = DateStarted;
     }
 
     get Name() {
-        return this.#name;
+        return this.name;
     }
 
     get Description() {
-        return this.#desc;
-    }   
-
-    get DateCreated() {
-        return this.#dateCreated;
-    }
-
-    get DateDue() {
-        return this.#dateToDue;
-    }
-
+        return this.desc;
+    }  
 
 } 
 
 class Project extends Content {
-    project;
-    #name;
-    #desc;
-    #dateCreated;
+    #EndDate;
 
-    constructor() { 
-        super(Title, Description);
-        this.#name = Title;
-        this.#desc = Description;
+    constructor(Title, Description, DateStarted, DateEnd) { 
+        super(Title, Description, DateStarted);
+        this.#EndDate = DateEnd;
     }
 
-    CreateProject() {
-        project = { 
-            ProjectTitle: this.#name,
-            ProjectDescription: this.#desc,
-        }
-
-        return this.project;
+    get ProjectName() {
+        super.Name();
     }
 
 }
@@ -58,7 +40,7 @@ class Task extends Content {
     Task;
 
     constructor() {
-        super();
+        super(Title, Description, DateStarted);
     }
 
     

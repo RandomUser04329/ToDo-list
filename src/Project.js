@@ -2,11 +2,24 @@ class Content {
     name;
     desc;
     DateStarted;
+    content = {};
 
     constructor(Title, Description, DateStarted) {
         this.name = Title;
         this.desc = Description;
         this.DateStarted = DateStarted;
+    }
+
+    ConstructContent() { 
+        if (this.name != "" && this.desc != "" && this.DateStarted != "") {
+            content = {
+                ContentName: this.name,
+                ContentDesc: this.desc,
+                ContentDateStart: this.DateStarted,
+            }
+
+            return content
+        }
     }
 
     get Name() {
@@ -17,18 +30,48 @@ class Content {
         return this.desc;
     }  
 
+    get DateStarted() {
+        return this.DateStarted;
+    }
+
 } 
 
 class Project extends Content {
-    #EndDate;
+    project;
+    EndDate;
 
     constructor(Title, Description, DateStarted, DateEnd) { 
         super(Title, Description, DateStarted);
-        this.#EndDate = DateEnd;
+        this.EndDate = DateEnd;
+    }
+    
+    ConstructProjectContent() {
+        super.ConstructContent();
     }
 
-    get ProjectName() {
-        super.Name();
+
+    get getProjectName() {
+        return super.Name;
+    }
+
+    get getProjectDesc() {
+        return super.Description;
+    }
+
+    get getProjectDateStarted() {
+        return super.DateStarted;
+    }
+
+    set NewProjectName(PName) {
+        this.name = PName;
+    }
+
+    set NewProjectDesc(PDesc) {
+        this.desc = PDesc;
+    }
+
+    set NewProjectDueDate(PEndDate) {
+        this.EndDate = PEndDate;
     }
 
 }
